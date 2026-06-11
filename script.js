@@ -4,21 +4,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove active class from all buttons and add to clicked one
+            if (button.classList.contains('active')) return;
+
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
             const filterValue = button.getAttribute('data-filter');
 
             projectCards.forEach(card => {
-                if (filterValue === 'all') {
-                    card.classList.remove('hide');
-                } else {
-                    if (card.getAttribute('data-category') === filterValue) {
-                        card.classList.remove('hide');
-                    } else {
-                        card.classList.add('hide');
-                    }
+                const matchesFilter = filterValue === 'all' || card.getAttribute('data-category') === filterValue;
+
+                if (matchesFilter) {
+                   card.classList.remove('hide');                    
+                    requestAnimationFrame(() => {
+                        card.classList.remove('fade-out');
+                    });
+                } else {                    
+                    card.classList.add('fade-out');               
+                   
+                    card.addEventListener('transitionend', function handleFade() {
+                        if (card.classList.contains('fade-out')) {
+                            card.classList.add('hide');
+                        }
+                        card.removeEventListener('transitionend', handleFade);
+                    });
                 }
             });
         });

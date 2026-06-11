@@ -49,18 +49,6 @@ body {
     font-size: 1.2rem;
 }
 
-.social-links a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: var(--accent-color);
-}
-
 /* Projects Section */
 .projects-section h2 {
     margin-bottom: 30px;
@@ -75,6 +63,7 @@ body {
 }
 
 .btn {
+    font-weight: 600;
     background: var(--card-bg);
     color: var(--text-color);
     border: 1px solid #334155;
@@ -97,12 +86,17 @@ body {
     gap: 30px;
 }
 
+/* Unified Project Card Base Styles */
 .project-card {
     background-color: var(--card-bg);
     border-radius: 12px;
     border: 1px solid #334155;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;   
+    display: flex;
+    flex-direction: column;     
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 }
 
 .project-card:hover {
@@ -139,36 +133,64 @@ body {
     border-radius: 20px;
 }
 
-.project-links a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin-right: 20px;
+/* Project Cards Button Layout */
+.project-links {
+    display: flex;
+    gap: 12px;
+    margin-top: auto; 
+}
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1; 
+    max-width: 160px; 
+    padding: 10px 16px;
     font-size: 0.9rem;
-    font-weight: bold;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
 }
 
-.project-links a:hover {
-    text-decoration: underline;
+/* Live Demo & Request Code - Primary Accent Style */
+.demo-btn, .request-btn {
+    background-color: var(--accent-color);
+    color: #0f172a; 
+    border: 1px solid var(--accent-color);
 }
 
-/* JS Filter Animation Class */
-.hide {
-    display: none;
-}
-/* Smooth fade-in for filtered projects */
-.project-card {
-    animation: fadeIn 0.4s ease forwards;
+.demo-btn:hover, .request-btn:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    transform: translateY(-2px);
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* GitHub Code Button - Outline Slate Style */
+.code-btn {
+    background-color: transparent;
+    color: var(--text-color) !important; 
+    border: 1px solid #334155;
+}
+
+.code-btn:hover {
+    background-color: #334155;
+    border-color: #475569;
+    color: var(--text-color) !important;
+    text-decoration: none !important; 
+    transform: translateY(-2px);
+}
+
+/* JS Filter Animation Classes */
+.project-card.hide {
+    display: none !important;
+}
+
+.project-card.fade-out {
+    opacity: 0;
+    transform: scale(0.95);
 }
 
 /* --- Global Section Utilities --- */
@@ -196,7 +218,7 @@ body {
 .about-content p {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: #cbd5e1; /* Smooth light grey text */
+    color: #cbd5e1; 
     margin-bottom: 20px;
 }
 
@@ -210,7 +232,7 @@ body {
 
 /* --- Contact Section Styles --- */
 .contact-bg {
-    background-color: #0b1528; /* Slightly darker slate blue to create visual depth */
+    background-color: #0b1528; 
 }
 
 .contact-subtitle {
@@ -244,7 +266,7 @@ body {
 .form-group textarea {
     width: 100%;
     padding: 12px 16px;
-    background-color: #1e293b; /* Deep input contrast */
+    background-color: #1e293b; 
     border: 1px solid #334155;
     border-radius: 6px;
     color: #ffffff;
@@ -253,15 +275,13 @@ body {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Active focus ring effect matching your header style */
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #38bdf8; /* Soft blue accent */
+    border-color: #38bdf8; 
     box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
 }
 
-/* Elegant call-to-action button */
 .submit-btn {
     align-self: flex-start;
     padding: 12px 30px;
@@ -290,7 +310,36 @@ body {
         padding: 50px 16px;
     }
     .submit-btn {
-        width: 100%; /* Full width button on mobile devices */
+        width: 100%; 
         text-align: center;
     }
+}
+
+/* Social Media Icons */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #1e293b; 
+    color: #38bdf8; 
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.social-btn:hover {
+    background-color: #38bdf8;
+    color: #0f172a; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
 }
