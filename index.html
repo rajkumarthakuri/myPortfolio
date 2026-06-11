@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <title>Rajkumar Thakuri | Software Engineer/Programmer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Hi, I'm <span class="highlight">Rajkumar Thakuri</span></h1>
+            <p>I'm a versatile Programmer specializing in full-stack development. With hands-on experience across C/C++, Java, React, Python, and classic PHP/MySQL environments, I build robust tools, interactive frontends, and data-driven management systems from the ground up.</p>
+            <div class="social-links">
+                <a href="https://github.com/rajkumarthakuri" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
+                <a href="https://linkedin.com/in/rajkumar-thakuri" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="projects-section">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            
+        <div class="filter-buttons">
+            <button class="btn active" data-filter="all">All</button>
+            <button class="btn" data-filter="frontend">Frontend / JS</button>
+            <button class="btn" data-filter="fullstack">Full-Stack</button>
+            <button class="btn" data-filter="python">Python</button>
+        </div>
+
+            <div class="projects-grid">
+                
+                <div class="project-card" data-category="frontend">
+                    <div class="card-content">
+                        <h3>Point of Sale & Inventory App</h3>
+                        <p>A dynamic single-page application optimized for retail. Tracks inventory levels, sales transactions, and features complex state management built with React and Vite.</p>
+                        <div class="tags">
+                            <span>React</span><span>Vite</span><span>JS</span>
+                        </div>
+                        <div class="project-links">
+                            <span style="color: var(--text-muted); font-size: 0.9rem;">💻 Run Locally</span>
+                            <a href="mailto:raaz07@hotmail.com?subject=Inquiry about Point of Sale & Inventory App Source Code" style="margin-left: 15px;">Request Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fullstack">
+                    <div class="card-content">
+                        <h3>Full-Stack CMS & News Platform</h3>
+                        <p>A data-driven Content Management System with secure authentication, relational MySQL database architecture, an admin dashboard, and optimized SEO performance.</p>
+                        <div class="tags">
+                            <span>PHP</span><span>MySQL</span><span>Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <span style="color: var(--text-muted); font-size: 0.9rem;">💻 Run Locally</span>
+                            <a href="mailto:raaz07@hotmail.com?subject=Inquiry about Full-Stack CMS & News Platform Source Code" style="margin-left: 15px;">Request Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="frontend">
+                    <div class="card-content">
+                        <h3>Advanced Scientific Calculator</h3>
+                        <p>A pure JS mathematical engine capable of processing advanced workflows including matrices, vector calculus, distributions, and combinations.</p>
+                        <div class="tags">
+                            <span>HTML5</span><span>CSS3</span><span>Vanilla JS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://rajkumarthakuri.github.io/advance-Calculator">🔗 Live Demo</a>
+                            <a href="https://github.com/rajkumarthakuri/advance-Calculator">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="python">
+                    <div class="card-content">
+                        <h3>World Weather Application</h3>
+                        <p>A Python-driven application integrating third-party REST APIs. Implements asynchronous data fetching, error handling, and structured JSON parsing.</p>
+                        <div class="tags">
+                            <span>Python</span><span>REST API</span><span>JSON</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://world-weather-hemv.onrender.com/weather">🔗 Live Demo</a>
+                            <a href="https://github.com/rajkumarthakuri/world-weather">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="portfolio-section">
+        <div class="section-container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>
+                    I am a passionate Programmer and Software Engineer dedicated to building robust, user-centric digital experiences. My journey in tech spans full-stack development, database architecture, and performance optimization, allowing me to tackle complex problems from multiple angles.
+                </p>
+                <p>
+                    Whether I'm managing application state in React, crafting clean relational schemas in MySQL, or writing efficient Python scripts, I thrive on turning abstract ideas into clean, maintainable code. Beyond programming, I'm always eager to explore emerging technologies and collaborate on innovative projects.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="portfolio-section contact-bg">
+        <div class="section-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-subtitle">Have an exciting project, a job opportunity, or just want to say hello? Drop me a message!</p>
+            
+            <form class="contact-form" action="https://formspree.io/f/meewllwp" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
